@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10131c" />
+  <title>Master Set Journey | Pokémon TCG Collection Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="pokeball">◉</div>
+        <div>
+          <strong>PokéVault</strong>
+          <small>TCG COLLECTION MANAGER</small>
+        </div>
+      </div>
+
+      <p class="nav-label">WORKSPACE</p>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard">▦ Dashboard</button>
+        <button class="nav-item" data-page="catalogue">⌕ Catalogue</button>
+        <button class="nav-item" data-page="collection">▤ Collection</button>
+        <button class="nav-item" data-page="binder">▦ Binder</button>
+        <button class="nav-item" data-page="sets">▧ Sets</button>
+        <button class="nav-item" data-page="pokedex">◉ Pokédex</button>
+        <button class="nav-item" data-page="wishlist">♡ Wishlist</button>
+        <button class="nav-item" data-page="sealed">▣ Sealed</button>
+        <button class="nav-item" data-page="portfolio">↗ Portfolio</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button id="themeToggle" class="nav-item">☼ Theme</button>
+        <small>Local collection · PokéVault</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <small>YOUR COLLECTION / <span id="breadcrumb">DASHBOARD</span></small>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="backupBtn" title="Download full backup">↓ Backup</button>
+          <label class="icon-btn" title="Restore backup">
+            ↑ Restore
+            <input type="file" id="restoreInput" accept=".json" hidden />
+          </label>
+        </div>
+      </header>
+
+      <div id="toast" class="toast hidden"></div>
+      <section id="content"></section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2 id="modalTitle">Add to Collection</h2>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
